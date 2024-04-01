@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+
+  #postgresql:
+  #  image: postgres:15
+  #  volumes:
+  #    - postgres_vol:/var/lib/postgresql/data/
+  #  environment:
+  #    - POSTGRES_PASSWORD=postgresadmin
+  #    - POSTGRES_USER=postgresadmin
+  #  ports:
+  #    - "5432:5432"
+  #  healthcheck:
+  #    test: ["CMD-SHELL", "pg_isready"]
+  #    interval: 10s
+  #    timeout: 5s
+  #    retries: 5
+
+  chat_engine:
+    restart: no
+    container_name: try_application
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/app      
+    environment:
+      APP_HOST: 0.0.0.0
+      APP_PORT: 80
+      # Log settings
+      LOG_LVL: INFO    
+      
+volumes:
+  postgres_vol:
