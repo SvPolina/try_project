@@ -5,7 +5,7 @@ import uvicorn
 app = FastAPI()
 @app.post("/")
 def root():
-    return {"Hello": "World_post"}
+    return {"Hello": "World_post update"}
 
 @app.get("/")
 def root():
