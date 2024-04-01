@@ -1,0 +1,17 @@
+#ersion: '3.7'
+
+#x-aws-vpc: vpc-0e6f7e8fdd53c2d7b
+#x-aws-cluster: "arn:aws:ecs:eu-central-1:730335278748:cluster/ecs-cluster-2"
+#x-aws-loadbalancer: "arn:aws:elasticloadbalancing:eu-central-1:730335278748:loadbalancer/app/try-alb/6180dd96cc1983ea"
+#services:
+
+#  chat_engine:
+#    image: 730335278748.dkr.ecr.eu-central-1.amazonaws.com/try-repo
+#    ports:
+#      - "8080:80" 
+#  test:
+#    x-aws-policies:
+#      - "arn:aws:iam::aws:policy/AmazonS3FullAccess"      
+      
+#volumes:
+#  postgres_vol:
